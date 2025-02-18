@@ -1,4 +1,22 @@
-<!DOCTYPE html>
+body {
+  font-family: 'Cinzel', serif; /* Фэнтези шрифт */
+  background: url('images/фон.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #f8f1e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
   margin-bottom: 20px;
   color: #e0d4b7;
 }
