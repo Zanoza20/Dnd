@@ -1,6 +1,6 @@
 body {
   font-family: 'Cinzel', serif; /* Фэнтези шрифт */
-  background: url('images/фон.jpg') no-repeat center center fixed;
+  background: url('фон.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #f8f1e5;
   display: flex;
