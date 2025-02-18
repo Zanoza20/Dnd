@@ -1,6 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D&D Notes Repository</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <button id="back-button" class="back-button" style="display: none;">Назад</button>
+  <div class="container" id="initial-buttons">
+    <h1>Хранилище Заметок</h1>
+    <button class="fantasy-button" onclick="showDetails('Ферон')">Ферон</button>
+    <button class="fantasy-button" onclick="showDetails('Расколотые земли')">Расколотые земли</button>
+    <button class="fantasy-button" onclick="showDetails('Мир катаклизма')">Мир катаклизма</button>
+  </div>
+  <div class="container" id="details-buttons" style="display: none;">
+    <button class="fantasy-button" onclick="showCharacters()">Персонажи</button>
+    <button class="fantasy-button">Сюжет</button>
+    <button class="fantasy-button">Фракции</button>
+    <button class="fantasy-button">Места</button>
+    <button class="fantasy-button">Артефакты</button>
+    <button class="fantasy-button" onclick="showAdventures()">Наши похождения</button>
+  </div>
+  <div class="container" id="characters-buttons-feron" style="display: none;">
+    <button class="fantasy-button" onclick="showNPC('Ферон')">NPC</button>
+    <button class="fantasy-button">Игроки</button>
+  </div>
+  <div class="container" id="characters-buttons-rascol" style="display: none;">
+    <button class="fantasy-button" onclick="showNPC('Расколотые земли')">NPC</button>
+    <button class="fantasy-button">Игроки</button>
+  </div>
+  <div class="container" id="characters-buttons-cataclysm" style="display: none;">
+    <button class="fantasy-button" onclick="showNPC('Мир катаклизма')">NPC</button>
+    <button class="fantasy-button">Игроки</button>
+  </div>
+  <div class="container" id="npc-buttons-feron" style="display: none;">
+    <button class="fantasy-button" onclick="openDocument('Аделин')">Аделин</button>
+    <button class="fantasy-button" onclick="openDocument('Лорд Зуб')">Лорд Зуб</button>
+    <button class="fantasy-button" onclick="openDocument('Отти')">Отти</button>
+    <button class="fantasy-button" onclick="openDocument('Кристофер Алая Цепь')">Кристофер Алая Цепь</button>
+  </div>
+  <div class="container" id="adventures-buttons" style="display: none;">
+    <button class="fantasy-button">Игра 1</button>
+    <button class="fantasy-button">Игра 2</button>
+    <button class="fantasy-button">Игра 3</button>
+    <button class="fantasy-button">Игра 4</button>
+    <button class="fantasy-button">Игра 5</button>
+    <button class="fantasy-button">Игра 6</button>
+    <button class="fantasy-button">Игра 7</button>
+    <button class="fantasy-button">Игра 8</button>
+    <button class="fantasy-button">Игра 9</button>
+    <button class="fantasy-button">Игра 10</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+/* styles.css */
 body {
   font-family: 'Cinzel', serif; /* Фэнтези шрифт */
-  background: url('фон.jpg') no-repeat center center fixed;
+  background: url('images/фон.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #f8f1e5;
   display: flex;
