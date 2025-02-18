@@ -7,11 +7,19 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
+  <button id="back-button" class="back-button" style="display: none;">Назад</button>
+  <div class="container" id="initial-buttons">
     <h1>Хранилище Заметок</h1>
-    <button class="fantasy-button">Ферон</button>
-    <button class="fantasy-button">Расколотые земли</button>
-    <button class="fantasy-button">Мир катаклизма</button>
+    <button class="fantasy-button" onclick="showDetails('Ферон')">Ферон</button>
+    <button class="fantasy-button" onclick="showDetails('Расколотые земли')">Расколотые земли</button>
+    <button class="fantasy-button" onclick="showDetails('Мир катаклизма')">Мир катаклизма</button>
+  </div>
+  <div class="container" id="details-buttons" style="display: none;">
+    <button class="fantasy-button">Сюжет</button>
+    <button class="fantasy-button">Персонажи</button>
+    <button class="fantasy-button">Фракции</button>
+    <button class="fantasy-button">Места</button>
+    <button class="fantasy-button">Наши похождения</button>
   </div>
   <script src="script.js"></script>
 </body>
