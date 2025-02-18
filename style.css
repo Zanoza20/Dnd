@@ -1,0 +1,42 @@
+body {
+  font-family: 'Cinzel', serif; /* Фэнтези шрифт */
+  background-color: #2e1a47;
+  color: #f8f1e5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #e0d4b7;
+}
+
+.fantasy-button {
+  background: linear-gradient(145deg, #6e3b8c, #3b1f5b);
+  border: 2px solid #e0d4b7;
+  color: #f8f1e5;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.fantasy-button:hover {
+  background: #8b4aad;
+  transform: scale(1.1);
+}
+
+.fantasy-button:active {
+  background: #4d1f5d;
+}
