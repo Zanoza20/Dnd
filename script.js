@@ -1,4 +1,7 @@
+let currentSection = '';
+
 function showDetails(section) {
+  currentSection = section;
   document.getElementById('initial-buttons').style.display = 'none';
   document.getElementById('details-buttons').style.display = 'block';
   document.getElementById('back-button').style.display = 'block';
@@ -10,21 +13,25 @@ function showAdventures() {
 }
 
 function showCharacters() {
-  document.getElementById('details-buttons').style.display = 'none';
-  document.getElementById('characters-buttons').style.display = 'block';
+  if (currentSection === 'Ферон') {
+    document.getElementById('details-buttons').style.display = 'none';
+    document.getElementById('characters-buttons-feron').style.display = 'block';
+  }
 }
 
-function showNPC() {
-  document.getElementById('characters-buttons').style.display = 'none';
-  document.getElementById('npc-buttons').style.display = 'block';
+function showNPC(section) {
+  if (section === 'Ферон') {
+    document.getElementById('characters-buttons-feron').style.display = 'none';
+    document.getElementById('npc-buttons-feron').style.display = 'block';
+  }
 }
 
 function goBack() {
-  if (document.getElementById('npc-buttons').style.display === 'block') {
-    document.getElementById('npc-buttons').style.display = 'none';
-    document.getElementById('characters-buttons').style.display = 'block';
-  } else if (document.getElementById('characters-buttons').style.display === 'block') {
-    document.getElementById('characters-buttons').style.display = 'none';
+  if (document.getElementById('npc-buttons-feron').style.display === 'block') {
+    document.getElementById('npc-buttons-feron').style.display = 'none';
+    document.getElementById('characters-buttons-feron').style.display = 'block';
+  } else if (document.getElementById('characters-buttons-feron').style.display === 'block') {
+    document.getElementById('characters-buttons-feron').style.display = 'none';
     document.getElementById('details-buttons').style.display = 'block';
   } else if (document.getElementById('adventures-buttons').style.display === 'block') {
     document.getElementById('adventures-buttons').style.display = 'none';
