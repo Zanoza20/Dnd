@@ -32,6 +32,11 @@ function showNPC(section) {
   }
 }
 
+function openDocument(npcName) {
+  const filePath = `npc Ферон/${npcName}.word`;
+  window.open(filePath, '_blank');
+}
+
 function goBack() {
   if (document.getElementById('npc-buttons-feron').style.display === 'block') {
     document.getElementById('npc-buttons-feron').style.display = 'none';
