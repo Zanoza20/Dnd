@@ -32,45 +32,13 @@ function showNPC(section) {
   }
 }
 
-function showNPCDetails(npcName) {
-  const npcData = {
-    'Аделин': {
-      description: 'Аделин — таинственный маг, известный своей склонностью к экспериментам с магией природы.',
-      image: 'images/adelin.jpg'
-    },
-    'Лорд Зуб': {
-      description: 'Лорд Зуб — жестокий лидер банды наемников, обитающей в темных лесах Ферона.',
-      image: 'images/lord_zub.jpg'
-    },
-    'Отти': {
-      description: 'Отти — старый мудрец, который хранит древние знания о прошлом Ферона.',
-      image: 'images/otti.jpg'
-    },
-    'Кристофер Алая Цепь': {
-      description: 'Кристофер Алая Цепь — бывший рыцарь, предавший свой орден ради запретной силы.',
-      image: 'images/kristopher.jpg'
-    }
-  };
-
-  const npc = npcData[npcName];
-
-  if (npc) {
-    document.getElementById('npc-name').innerText = npcName;
-    document.getElementById('npc-description').innerText = npc.description;
-    const npcImage = document.getElementById('npc-image');
-    npcImage.src = npc.image;
-    npcImage.style.display = 'block';
-  }
-
-  document.getElementById('npc-buttons-feron').style.display = 'none';
-  document.getElementById('npc-details').style.display = 'block';
+function openDocument(npcName) {
+  const filePath = `npc Ферон/${npcName}.docx`;
+  window.open(filePath, '_blank');
 }
 
 function goBack() {
-  if (document.getElementById('npc-details').style.display === 'block') {
-    document.getElementById('npc-details').style.display = 'none';
-    document.getElementById('npc-buttons-feron').style.display = 'block';
-  } else if (document.getElementById('npc-buttons-feron').style.display === 'block') {
+  if (document.getElementById('npc-buttons-feron').style.display === 'block') {
     document.getElementById('npc-buttons-feron').style.display = 'none';
     document.getElementById('characters-buttons-feron').style.display = 'block';
   } else if (document.getElementById('characters-buttons-feron').style.display === 'block') {
