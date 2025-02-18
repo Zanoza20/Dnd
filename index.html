@@ -35,10 +35,10 @@
     <button class="fantasy-button">Игроки</button>
   </div>
   <div class="container" id="npc-buttons-feron" style="display: none;">
-    <button class="fantasy-button" onclick="openDocument('Аделин')">Аделин</button>
-    <button class="fantasy-button" onclick="openDocument('Лорд Зуб')">Лорд Зуб</button>
-    <button class="fantasy-button" onclick="openDocument('Отти')">Отти</button>
-    <button class="fantasy-button" onclick="openDocument('Кристофер Алая Цепь')">Кристофер Алая Цепь</button>
+    <button class="fantasy-button" onclick="showNPCDetails('Аделин')">Аделин</button>
+    <button class="fantasy-button" onclick="showNPCDetails('Лорд Зуб')">Лорд Зуб</button>
+    <button class="fantasy-button" onclick="showNPCDetails('Отти')">Отти</button>
+    <button class="fantasy-button" onclick="showNPCDetails('Кристофер Алая Цепь')">Кристофер Алая Цепь</button>
   </div>
   <div class="container" id="adventures-buttons" style="display: none;">
     <button class="fantasy-button">Игра 1</button>
@@ -51,6 +51,11 @@
     <button class="fantasy-button">Игра 8</button>
     <button class="fantasy-button">Игра 9</button>
     <button class="fantasy-button">Игра 10</button>
+  </div>
+  <div class="container" id="npc-details" style="display: none;">
+    <h2 id="npc-name"></h2>
+    <p id="npc-description"></p>
+    <img id="npc-image" src="" alt="NPC Image" style="max-width: 100%; height: auto; display: none;">
   </div>
   <script src="script.js"></script>
 </body>
