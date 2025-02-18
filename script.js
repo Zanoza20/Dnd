@@ -34,34 +34,11 @@ function showNPC(section) {
 
 function openDocument(npcName) {
   const filePath = `npc Ферон/${npcName}.docx`;
-
-  fetch(filePath)
-    .then(response => response.arrayBuffer())
-    .then(buffer => {
-      return mammoth.extractRawText({ arrayBuffer: buffer });
-    })
-    .then(result => {
-      document.getElementById('npc-buttons-feron').style.display = 'none';
-
-      let npcDetailsDiv = document.getElementById('npc-details');
-      npcDetailsDiv.style.display = 'block';
-      npcDetailsDiv.innerHTML = `
-        <h2>${npcName}</h2>
-        <p>${result.value}</p>
-      `;
-    })
-    .catch(error => {
-      console.error('Ошибка загрузки файла:', error);
-      alert('Не удалось загрузить информацию о персонаже.');
-    });
+  window.open(filePath, '_blank');
 }
 
 function goBack() {
-  const npcDetailsDiv = document.getElementById('npc-details');
-  if (npcDetailsDiv.style.display === 'block') {
-    npcDetailsDiv.style.display = 'none';
-    document.getElementById('npc-buttons-feron').style.display = 'block';
-  } else if (document.getElementById('npc-buttons-feron').style.display === 'block') {
+  if (document.getElementById('npc-buttons-feron').style.display === 'block') {
     document.getElementById('npc-buttons-feron').style.display = 'none';
     document.getElementById('characters-buttons-feron').style.display = 'block';
   } else if (document.getElementById('characters-buttons-feron').style.display === 'block') {
@@ -82,4 +59,6 @@ function goBack() {
     document.getElementById('back-button').style.display = 'none';
   }
 }
- document.getElementById('back-button').addEventListener('click', goBack);
+
+// Назначаем обработчик события для кнопки "Назад"
+document.getElementById('back-button').addEventListener('click', goBack);
