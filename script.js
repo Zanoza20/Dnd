@@ -25,6 +25,13 @@ function showCharacters() {
   }
 }
 
+function showPlot() {
+  if (currentSection === 'Ферон') {
+    document.getElementById('details-buttons').style.display = 'none';
+    document.getElementById('plot-buttons-feron').style.display = 'block';
+  }
+}
+
 function showNPC(section) {
   if (section === 'Ферон') {
     document.getElementById('characters-buttons-feron').style.display = 'none';
@@ -32,8 +39,8 @@ function showNPC(section) {
   }
 }
 
-function openDocument(npcName) {
-  const filePath = `npc Ферон/${npcName}.docx`;
+function openDocument(docName) {
+  const filePath = `npc Ферон/${docName}.docx`;
   window.open(filePath, '_blank');
 }
 
@@ -52,6 +59,9 @@ function goBack() {
     document.getElementById('details-buttons').style.display = 'block';
   } else if (document.getElementById('adventures-buttons').style.display === 'block') {
     document.getElementById('adventures-buttons').style.display = 'none';
+    document.getElementById('details-buttons').style.display = 'block';
+  } else if (document.getElementById('plot-buttons-feron').style.display === 'block') {
+    document.getElementById('plot-buttons-feron').style.display = 'none';
     document.getElementById('details-buttons').style.display = 'block';
   } else {
     document.getElementById('details-buttons').style.display = 'none';
