@@ -33,7 +33,7 @@ function showNPC(section) {
 }
 
 function openDocument(npcName) {
-  const filePath = `npc Ферон/${npcName}.word`;
+  const filePath = `npc Ферон/${npcName}.docx`;
   window.open(filePath, '_blank');
 }
 
