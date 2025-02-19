@@ -17,8 +17,8 @@
   <div class="container" id="details-buttons" style="display: none;">
     <button class="fantasy-button" onclick="showCharacters()">Персонажи</button>
     <button class="fantasy-button" onclick="showPlot()">Сюжет</button>
-    <button class="fantasy-button">Фракции</button>
-    <button class="fantasy-button">Места</button>
+    <button class="fantasy-button" onclick="showFactions()">Фракции</button>
+    <button class="fantasy-button" onclick="showPlaces()">Места</button>
     <button class="fantasy-button">Артефакты</button>
     <button class="fantasy-button" onclick="showAdventures()">Наши похождения</button>
   </div>
@@ -56,6 +56,21 @@
     <button class="fantasy-button" onclick="openDocument('Страны')">Страны</button>
     <button class="fantasy-button" onclick="openDocument('История мира')">История мира</button>
     <button class="fantasy-button" onclick="openDocument('Боги Ферона')">Боги Ферона</button>
+  </div>
+  <div class="container" id="factions-buttons-feron" style="display: none;">
+    <button class="fantasy-button" onclick="openDocument('Алая Цепь')">Алая Цепь</button>
+    <button class="fantasy-button" onclick="openDocument('Святой клинок')">Святой клинок</button>
+  </div>
+  <div class="container" id="places-buttons-feron" style="display: none;">
+    <button class="fantasy-button" onclick="showCountry('Страна людей')">Страна людей</button>
+    <button class="fantasy-button">Страна пустынников</button>
+    <button class="fantasy-button">Страна подземников</button>
+    <button class="fantasy-button">Страна эльфов</button>
+    <button class="fantasy-button">Страна пиратов</button>
+    <button class="fantasy-button">Плутоний</button>
+  </div>
+  <div class="container" id="country-people-buttons" style="display: none;">
+    <button class="fantasy-button" onclick="openDocument('Малый Доран')">Малый Доран</button>
   </div>
   <script src="script.js"></script>
 </body>
