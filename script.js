@@ -50,3 +50,19 @@ function showCountry(country) {
   if (country === 'Страна людей') {
     document.getElementById('places-buttons-feron').style.display = 'none';
     document.getElementById('country-people-buttons').
+    style.display = 'block';
+  }
+}
+
+function openDocument(docName) {
+  window.location.href = `Ферон/${docName}.docx`;
+}
+
+document.getElementById('back-button').addEventListener('click', function() {
+  document.getElementById('details-buttons').style.display = 'block';
+  document.querySelectorAll('.container').forEach(container => {
+    if (container.id !== 'details-buttons' && container.id !== 'initial-buttons') {
+      container.style.display = 'none';
+    }
+  });
+});
