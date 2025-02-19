@@ -25,6 +25,13 @@ function showCharacters() {
   }
 }
 
+function showNPC(world) {
+  if (world === 'Ферон') {
+    document.getElementById('characters-buttons-feron').style.display = 'none';
+    document.getElementById('npc-buttons-feron').style.display = 'block';
+  }
+}
+
 function showPlot() {
   if (currentSection === 'Ферон') {
     document.getElementById('details-buttons').style.display = 'none';
@@ -49,8 +56,7 @@ function showPlaces() {
 function showCountry(country) {
   if (country === 'Страна людей') {
     document.getElementById('places-buttons-feron').style.display = 'none';
-    document.getElementById('country-people-buttons').
-    style.display = 'block';
+    document.getElementById('country-people-buttons').style.display = 'block';
   }
 }
 
@@ -58,11 +64,20 @@ function openDocument(docName) {
   window.location.href = `Ферон/${docName}.docx`;
 }
 
+// Функция для возврата назад
 document.getElementById('back-button').addEventListener('click', function() {
-  document.getElementById('details-buttons').style.display = 'block';
-  document.querySelectorAll('.container').forEach(container => {
-    if (container.id !== 'details-buttons' && container.id !== 'initial-buttons') {
-      container.style.display = 'none';
-    }
-  });
+  // Возвращаем к меню миров, если мы находимся на экране выбора деталей
+  if (document.getElementById('details-buttons').style.display === 'block') {
+    document.getElementById('details-buttons').style.display = 'none';
+    document.getElementById('initial-buttons').style.display = 'block';
+    document.getElementById('back-button').style.display = 'none';
+  } else {
+    // Закрываем все контейнеры, кроме меню деталей
+    document.querySelectorAll('.container').forEach(container => {
+      if (container.style.display === 'block' && container.id !== 'details-buttons') {
+        container.style.display = 'none';
+      }
+    });
+    document.getElementById('details-buttons').style.display = 'block';
+  }
 });
