@@ -96,3 +96,8 @@ function goBack() {
 }
 
 document.getElementById('back-button').addEventListener('click', goBack);
+
+function openDocument(docName) {
+  const docPath = `Ферон/${docName}.docx`;
+  window.location.href = docPath;
+}
