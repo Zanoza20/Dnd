@@ -32,43 +32,21 @@ function showPlot() {
   }
 }
 
-function showNPC(section) {
-  if (section === 'Ферон') {
-    document.getElementById('characters-buttons-feron').style.display = 'none';
-    document.getElementById('npc-buttons-feron').style.display = 'block';
-  }
-}
-
-function openDocument(docName) {
-  const filePath = `npc Ферон/${docName}.docx`;
-  window.open(filePath, '_blank');
-}
-
-function goBack() {
-  if (document.getElementById('npc-buttons-feron').style.display === 'block') {
-    document.getElementById('npc-buttons-feron').style.display = 'none';
-    document.getElementById('characters-buttons-feron').style.display = 'block';
-  } else if (document.getElementById('characters-buttons-feron').style.display === 'block') {
-    document.getElementById('characters-buttons-feron').style.display = 'none';
-    document.getElementById('details-buttons').style.display = 'block';
-  } else if (document.getElementById('characters-buttons-rascol').style.display === 'block') {
-    document.getElementById('characters-buttons-rascol').style.display = 'none';
-    document.getElementById('details-buttons').style.display = 'block';
-  } else if (document.getElementById('characters-buttons-cataclysm').style.display === 'block') {
-    document.getElementById('characters-buttons-cataclysm').style.display = 'none';
-    document.getElementById('details-buttons').style.display = 'block';
-  } else if (document.getElementById('adventures-buttons').style.display === 'block') {
-    document.getElementById('adventures-buttons').style.display = 'none';
-    document.getElementById('details-buttons').style.display = 'block';
-  } else if (document.getElementById('plot-buttons-feron').style.display === 'block') {
-    document.getElementById('plot-buttons-feron').style.display = 'none';
-    document.getElementById('details-buttons').style.display = 'block';
-  } else {
+function showFactions() {
+  if (currentSection === 'Ферон') {
     document.getElementById('details-buttons').style.display = 'none';
-    document.getElementById('initial-buttons').style.display = 'block';
-    document.getElementById('back-button').style.display = 'none';
+    document.getElementById('factions-buttons-feron').style.display = 'block';
   }
 }
 
-// Назначаем обработчик события для кнопки "Назад"
-document.getElementById('back-button').addEventListener('click', goBack);
+function showPlaces() {
+  if (currentSection === 'Ферон') {
+    document.getElementById('details-buttons').style.display = 'none';
+    document.getElementById('places-buttons-feron').style.display = 'block';
+  }
+}
+
+function showCountry(country) {
+  if (country === 'Страна людей') {
+    document.getElementById('places-buttons-feron').style.display = 'none';
+    document.getElementById('country-people-buttons').
